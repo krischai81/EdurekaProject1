@@ -16,4 +16,4 @@ COPY context.xml /usr/local/tomcat/webapps/manager
 EXPOSE 8082
 
 #The CMD instruction specifies what to run when the container is run.
-CMD["catalina.sh", "run"]
+CMD ["catalina.sh", "run"]
