@@ -1,7 +1,7 @@
 #FROM 
 FROM tomcat:9-alpine
 
-LABEL maintainer= Krishna
+LABEL maintainer=Krishna
 
 RUN apt-get update && apt-get -y upgrade
 
