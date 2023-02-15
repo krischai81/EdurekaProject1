@@ -1,5 +1,5 @@
 #FROM 
-FROM tomcat:9-alpine
+FROM tomcat:9.0-alpine
 
 LABEL maintainer=Krishna
 
