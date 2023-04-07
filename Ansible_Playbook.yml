@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: build docker image
+      command: docker system prune -a -f
+      command: docker build -t Edureka-tomcat -f ./Dockerfile /var/lib/jenkins/workspace/EdurekaProject1Package/target/
