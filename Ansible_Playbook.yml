@@ -5,5 +5,5 @@
     - name: build docker image
       command: docker system prune -a -f
       command: docker build -t "edureka-tomcat" -f ./Dockerfile /var/lib/jenkins/workspace/EdurekaProject1Package/target/
-      command: docker run -d -p 8082:8080 edureka-tomcat
+     # command: docker run -d -p 8082:8080 edureka-tomcat
 
