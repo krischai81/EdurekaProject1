@@ -12,16 +12,16 @@
     - name: Log in to Docker Hub
       docker_login:
         #registry_url: https://hub.docker.com/
-        username: "{{ docker_hub_username }}"
-        password: "{{ docker_hub_password }}"
+        username: "krischai81"
+        password: "G1ng3rG@rlic2022#"
      
     - name: Tag Docker Image
       docker_image:
-        name: "{{ docker_image_name }}"
+        name: "Edureka-tomcat"
         tag: latest
-        repository: "{{ docker_hub_username }}/{{ docker_image_name }}"
+        repository: "krischai81/Edureka-tomcat"
 
     - name: Push Docker Image to Docker Hub
       docker_image:
-        name: "{{ docker_hub_username }}/{{ docker_image_name }}:latest"
+        name: "krischai81/Edureka-tomcat:latest"
         push: yes
