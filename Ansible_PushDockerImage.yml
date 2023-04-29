@@ -11,7 +11,7 @@
   tasks:
     - name: Log in to Docker Hub
       docker_login:
-        registry_url: https://hub.docker.com/
+        #registry_url: https://hub.docker.com/
         username: "{{ docker_hub_username }}"
         password: "{{ docker_hub_password }}"
      
