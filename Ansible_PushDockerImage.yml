@@ -4,7 +4,7 @@
     - community.docker
   gather_facts: no
   vars:
-    ansible_python_interpreter: /usr/bin/python3
+    ansible_python_interpreter: /usr/bin/python
     docker_image_name: Edureka-tomcat
     docker_hub_username: krischai81
     docker_hub_password: G1ng3rG@rlic2022#
