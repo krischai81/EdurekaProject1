@@ -1,5 +1,7 @@
 ---
 - hosts: localhost
+  collections:
+    - community.docker
   gather_facts: no
   vars:
     docker_image_name: Edureka-tomcat
