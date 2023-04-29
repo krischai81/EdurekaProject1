@@ -1,6 +1,5 @@
 ---
-- name: Push Docker Image to Docker Hub
-  hosts: localhost
+- hosts: localhost
   gather_facts: no
   vars:
     docker_image_name: Edureka-tomcat
