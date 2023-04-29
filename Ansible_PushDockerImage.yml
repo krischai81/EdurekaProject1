@@ -11,6 +11,7 @@
   tasks:
     - name: Log in to Docker Hub
       docker_login:
+        registry_url: https://hub.docker.com/
         username: "{{ docker_hub_username }}"
         password: "{{ docker_hub_password }}"
      
@@ -21,7 +22,6 @@
         repository: "{{ docker_hub_username }}/{{ docker_image_name }}"
 
     - name: Push Docker Image to Docker Hub
-      community.docker.docker_container
       docker_image:
         name: "{{ docker_hub_username }}/{{ docker_image_name }}:latest"
         push: yes
