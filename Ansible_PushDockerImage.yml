@@ -1,0 +1,23 @@
+---
+- name: Push Docker Image to Docker Hub
+- hosts: localhost
+  gather_facts: no
+  vars:
+    docker_image_name: Edureka-tomcat
+    docker_hub_username: krischai81
+    docker_hub_password: G1ng3rG@rlic2022#
+  tasks:
+    - name: Log in to Docker Hub
+      docker_login:
+        username: "{{ docker_hub_username }}"
+        password: "{{ docker_hub_password }}"
+     
+    - name: Tag Docker Image
+      docker_image:
+        name: "{{ docker_image_name }}"
+        tag: latest
+        repository: "{{ docker_hub_username }}/{{ docker_image_name }}"
+
+    - name: Push Docker Image to Docker Hub
+      docker_push:
+        name: "{{ docker_hub_username }}/{{ docker_image_name }}:latest"
