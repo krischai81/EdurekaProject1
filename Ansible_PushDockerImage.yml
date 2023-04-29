@@ -20,5 +20,6 @@
         repository: "{{ docker_hub_username }}/{{ docker_image_name }}"
 
     - name: Push Docker Image to Docker Hub
-      docker_push:
+      docker_image:
         name: "{{ docker_hub_username }}/{{ docker_image_name }}:latest"
+        push: yes
