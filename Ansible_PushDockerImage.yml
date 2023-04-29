@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  become: yes
   collections:
     - community.docker
   gather_facts: no
