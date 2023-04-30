@@ -20,7 +20,7 @@ spec:
     app: my-app
   ports:
   - protocol: TCP
-    port: 8083
+    port: 8082
     targetPort: 8080
   type: ClusterIP
 
