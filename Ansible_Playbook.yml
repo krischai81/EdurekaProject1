@@ -1,29 +1,7 @@
-- name: Build and push Docker image to Docker Hub
-  hosts: localhost
+---
+- hosts: localhost
+  gather_facts: no
   tasks:
-    - name: Copy Dockerfile to build context directory
-      copy:
-        src: Dockerfile
-        dest: /tmp/build-context/
-        
-    - name: Build Docker image using Dockerfile
-      docker_image:
-        source: build
-        build:
-          path: /tmp/build-context/
-       # src: /var/lib/jenkins/workspace/EdurekaProject1Package/target/
-        name: "krischai81/edureka-tomcat"
-        tag: "latest"
-        api_version: 1.42
-        
-    - name: Login to Docker Hub
-      docker_login:
-        username: "krischai81"
-        password: "G1ng3rG@rlic2022#"
-        registry_url: https://hub.docker.com/
-
-    - name: Push Docker image to Docker Hub
-      docker_image:
-        name: "krischai81/edureka-tomcat"
-        tag: "latest"
-        push: yes
+    - name: build docker image
+      command: docker system prune -a -f
+      command: docker build -t Edureka-tomcat -f ./Dockerfile /var/lib/jenkins/workspace/EdurekaProject1Package/target/
