@@ -9,11 +9,11 @@
     docker_hub_username: krischai81
     docker_hub_password: G1ng3rG@rlic2022#
   tasks:
-    - name: Log in to Docker Hub
-      docker_login:
+   # - name: Log in to Docker Hub
+   #   docker_login:
         #registry_url: https://hub.docker.com/
-        username: "krischai81"
-        password: "G1ng3rG@rlic2022#"
+   #     username: "krischai81"
+   #     password: "G1ng3rG@rlic2022#"
      
     - name: Tag Docker Image
       docker_image:
