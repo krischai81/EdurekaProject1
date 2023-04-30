@@ -1,5 +1,5 @@
 ---
-- hosts: master
+- hosts: localhost
   become: no
   gather_facts: no
   vars:
@@ -10,4 +10,5 @@
     command: kubectl --kubeconfig /home/parallels/.kube/config version
   
   - name: Apply Kubernetes manifest
-    shell: kubectl apply -f /tmp/EdurekaKube/Kube.yml --namespace={{ namespace }}
+    #shell: kubectl apply -f /tmp/EdurekaKube/Kube.yml --namespace={{ namespace }}
+    command: kubectl --kubeconfig /home/parallels/.kube/config apply -f /tmp/EdurekaKube/Kube.yml --namespace={{ namespace }}
