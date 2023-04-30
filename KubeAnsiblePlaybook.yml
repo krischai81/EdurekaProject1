@@ -6,6 +6,9 @@
     namespace: edureka-namespace
 
   tasks:
+  - name: check version
+    command: kubectl --kubeconfig /home/parallels/.kube version
+  
   - name: Apply Kubernetes manifest
     command:
       args:
