@@ -9,5 +9,5 @@
   - name: Apply Kubernetes manifest
     kubectl:
       apply:
-        filename: /path/to/manifest.yml
+        filename: /tmp/EdurekaKube/Kube.yml
       namespace: "{{ namespace }}"
