@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: abctech-pod
+spec:
+  containers:
+  - name: edureka-tomcat-container
+    image: krischai81/edureka-tomcat:latest
+    ports:
+    - containerPort: 8083
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: edureka-service
+spec:
+  selector:
+    app: my-app
+  ports:
+  - protocol: TCP
+    port: 8085
+    targetPort: 8083
+  type: ClusterIP
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: edureka-tomcat-container
+        image: krischai81/edureka-tomcat:latest
+        ports:
+        - containerPort: 8083
