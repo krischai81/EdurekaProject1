@@ -14,7 +14,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: edureka-service
+  name: abctech-service
 spec:
   selector:
     app: my-app
