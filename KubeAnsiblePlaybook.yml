@@ -7,7 +7,5 @@
 
   tasks:
   - name: Apply Kubernetes manifest
-    kubectl:
-      apply:
-        filename: /tmp/EdurekaKube/Kube.yml
+    command: kubectl apply -f /tmp/EdurekaKube/Kube.yml
       namespace: "{{ namespace }}"
