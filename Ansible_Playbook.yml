@@ -19,6 +19,7 @@
         registry_url: https://hub.docker.com/
 
     - name: Push Docker image to Docker Hub
-      docker_image_push:
+      docker_image:
         name: "krischai81/edureka-tomcat"
         tag: "latest"
+        push: yes
