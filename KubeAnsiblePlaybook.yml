@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: no
+  gather_facts: no
+  vars:
+    namespace: edureka-namespace
+
+  tasks:
+  - name: Apply Kubernetes manifest
+    kubectl:
+      apply:
+        filename: /path/to/manifest.yml
+      namespace: "{{ namespace }}"
