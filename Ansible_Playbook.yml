@@ -7,3 +7,13 @@
       command: docker build -t "edureka-tomcat" -f ./Dockerfile /var/lib/jenkins/workspace/EdurekaProject1Package/target/
      # command: docker run -d -p 8082:8080 edureka-tomcat
 
+    - name: Tag Docker Image
+      docker_image:
+        name: "Edureka-tomcat"
+        tag: latest
+        repository: "krischai81/edureka-tomcat"
+
+    - name: Push Docker Image to Docker Hub
+      docker_image:
+        name: "krischai81/edureka-tomcat:latest"
+        push: yes
