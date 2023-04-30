@@ -14,7 +14,7 @@
        # src: /var/lib/jenkins/workspace/EdurekaProject1Package/target/
         name: "krischai81/edureka-tomcat"
         tag: "latest"
-        api_version: 1.40
+        api_version: 1.42
         
     - name: Login to Docker Hub
       docker_login:
