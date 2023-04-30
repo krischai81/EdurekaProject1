@@ -7,7 +7,7 @@ spec:
   - name: edureka-tomcat-container
     image: krischai81/edureka-tomcat:latest
     ports:
-    - containerPort: 8083
+    - containerPort: 8080
 
 ---
 
@@ -20,8 +20,8 @@ spec:
     app: my-app
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8083
+    port: 8083
+    targetPort: 8080
   type: ClusterIP
 
 ---
@@ -44,4 +44,4 @@ spec:
       - name: edureka-tomcat-container
         image: krischai81/edureka-tomcat:latest
         ports:
-        - containerPort: 8083
+        - containerPort: 8080
