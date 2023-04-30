@@ -7,7 +7,7 @@
 
   tasks:
   - name: check version
-    command: kubectl --kubeconfig /home/parallels/.kube version
+    command: kubectl --kubeconfig /home/parallels/.kube/config version
   
   - name: Apply Kubernetes manifest
     command:
