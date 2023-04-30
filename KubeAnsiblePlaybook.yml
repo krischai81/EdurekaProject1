@@ -10,5 +10,4 @@
     command: kubectl --kubeconfig /home/parallels/.kube/config version
   
   - name: Apply Kubernetes manifest
-    command:
     shell: kubectl apply -f /tmp/EdurekaKube/Kube.yml --namespace={{ namespace }}
