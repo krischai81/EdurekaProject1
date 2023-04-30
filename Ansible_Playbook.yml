@@ -4,11 +4,11 @@
     - name: Copy Dockerfile to build context directory
       copy:
         src: Dockerfile
-        dest: /tmp/build-context
+        dest: /tmp/build-context/
 
     - name: Build Docker image using Dockerfile
       docker_image:
-        path: /tmp/build-context
+        path: /tmp/build-context/
         name: "krischai81/edureka-tomcat"
         tag: "latest"
         
