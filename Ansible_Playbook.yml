@@ -9,6 +9,7 @@
     - name: Build Docker image using Dockerfile
       docker_image:
         path: /tmp/build-context/
+        src: /var/lib/jenkins/workspace/EdurekaProject1Package/target/
         name: "krischai81/edureka-tomcat"
         tag: "latest"
         
