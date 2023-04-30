@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: master
   become: no
   gather_facts: no
   vars:
